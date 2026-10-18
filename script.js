@@ -1,78 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Scroll Animations (Simple Fade) ---
-    const observerOptions = {
+    // --- Smooth Reveal Animations ---
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // --- Auto-Hide Navbar ---
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.navbar');
+
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+        }, { passive: true });
+    }
+
+    // --- Parallax Engine ---
+    const parallaxElements = document.querySelectorAll('[data-speed]');
+    let requestAnimationFrameId = null;
+    let currentScrollY = window.scrollY;
+
+    const updateParallax = () => {
+        parallaxElements.forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-speed'));
+            
+            if (el.classList.contains('bg-grid') || el.classList.contains('orb')) {
+                // Absolute parallax for backgrounds based purely on scroll depth
+                const yPos = -(currentScrollY * speed);
+                el.style.transform = `translateY(${yPos}px)`;
+            } else {
+                // Relative parallax for content blocks
+                const rect = el.getBoundingClientRect();
+                const elementCenterY = rect.top + rect.height / 2;
+                const viewportCenterY = window.innerHeight / 2;
+                
+                // How far is element from center of screen?
+                const distanceFromCenter = elementCenterY - viewportCenterY;
+                
+                // The offset is a fraction of that distance
+                const offset = distanceFromCenter * (1 - speed);
+                el.style.transform = `translateY(${offset}px)`;
+            }
+        });
+        requestAnimationFrameId = null;
     };
 
-});
-
-// --- Auto-Hide Navbar ---
-let lastScrollY = window.scrollY;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 100) {
-        navbar.classList.add('nav-hidden');
-    } else {
-        navbar.classList.remove('nav-hidden');
-    }
-    lastScrollY = window.scrollY;
-});
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
+    window.addEventListener('scroll', () => {
+        currentScrollY = window.scrollY;
+        if (!requestAnimationFrameId) {
+            requestAnimationFrameId = window.requestAnimationFrame(updateParallax);
         }
-    });
-}, observerOptions);
-
-const animatedElements = document.querySelectorAll('.exp-row, .exp-card, .hero-text, .tech-grid span');
-animatedElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.8s ease-out';
-    observer.observe(el);
+    }, { passive: true });
+    
+    // Initial call to set positions
+    updateParallax();
 });
-
-// --- Click Spark Effect ---
-document.addEventListener('click', (e) => {
-    const sparkCount = 30;
-
-    for (let i = 0; i < sparkCount; i++) {
-        const spark = document.createElement('div');
-        spark.classList.add('spark');
-        document.body.appendChild(spark);
-
-        // Position at click
-        spark.style.left = `${e.pageX}px`;
-        spark.style.top = `${e.pageY}px`;
-
-        // Random angle and distance
-        const angle = Math.random() * Math.PI * 2;
-        const velocity = Math.random() * 100 + 40; // Explosion radius increased
-        const tx = Math.cos(angle) * velocity;
-        const ty = Math.sin(angle) * velocity;
-
-        // Animate
-        const duration = Math.random() * 0.5 + 0.3; // 0.3s to 0.8s
-
-        spark.animate([
-            { transform: 'translate(0, 0) scale(1)', opacity: 1 },
-            { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
-        ], {
-            duration: duration * 1000,
-            easing: 'cubic-bezier(0, .9, .57, 1)',
-            fill: 'forwards'
-        });
-
-        // Cleanup
-        setTimeout(() => {
-            spark.remove();
-        }, duration * 1000);
-    }
-});
-

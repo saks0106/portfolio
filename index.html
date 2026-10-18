@@ -1,172 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sakshem Gotekar | Data Analyst</title>
-    <meta name="description" content="Portfolio of a Data Analyst specializing in SQL, Power BI, Python, and more.">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
+    <meta name="description" content="Premium Portfolio of a Data Analyst specializing in SQL, Power BI, Python, and more.">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="bg-grid" data-speed="0.2"></div>
+    <div class="orb orb-1" data-speed="0.1"></div>
+    <div class="orb orb-2" data-speed="-0.1"></div>
+
     <nav class="navbar">
         <div class="logo">SG.</div>
         <div class="nav-links">
-
-            <a href="#tech-stack">Tech Stack</a>
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#hobbies">Hobbies</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <main class="minimal-container">
+    <div class="container">
         <!-- Hero Section -->
-        <section id="hero" class="hero-minimal">
-            <div class="hero-text">
-                <p class="overline">Data Analyst & BI Developer</p>
-                <h1>Sakshem<br>Gotekar.</h1>
-                <p class="intro-minimal">"I turn complex data into strategic decisions. Power BI, SQL, and Python are
-                    the engines that power insight and drive business impact."</p>
-                <div class="hero-actions">
-                    <a href="#experience" class="link-hover">View Experience</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="image-overlay-gradient"></div>
-                <img src="Hero1.png" alt="Sakshem Gotekar" class="hero-img-minimal">
-            </div>
-        </section>
-
-
-
-        <!-- Tech Stack (Minimalist Grid) -->
-        <section id="tech-stack" class="tech-minimal">
-            <div class="section-header">
-                <h2>Tech Stack</h2>
-                <span class="line"></span>
-            </div>
-            <div class="tech-grid">
-                <span>SQL</span>
-                <span>Python</span>
-                <span>Power BI</span>
-                <span>DAX</span>
-                <span>Microsoft Fabric</span>
-                <span>Data Warehousing</span>
-                <span>Big Data</span>
-                <span>Data Visualization</span>
-                <span>Data Modelling</span>
-                <span>DBT</span>
-                <span>Snowflake</span>
-            </div>
-        </section>
-
-        <!-- Experience (Clean Timeline) -->
-        <section id="experience" class="exp-minimal">
-            <div class="section-header">
-                <h2>Experience</h2>
-                <span class="line"></span>
-            </div>
-
-            <div class="exp-grid">
-                <!-- Role 1 -->
-                <div class="exp-card">
-                    <div class="exp-year">2024 — Present</div>
-                    <div class="exp-main">
-                        <div class="exp-header">
-                            <h3>Data Analyst</h3>
-                            <span class="company">@ Loyalie IT Solutions - Reloy</span>
-                        </div>
-                        <ul class="exp-bullets">
-                            <li>Delivered end-to-end analytics solutions using <strong>SQL, Python, Power BI and Monet
-                                    DB</strong>, enabling marketing campaigns that drove a <strong>30% increase in
-                                    engagement</strong> and <strong>15% increase in referrals</strong> over 2 years.
-                            </li>
-                            <li>Built and maintained <strong>4+ interactive dashboards</strong>, semantic models & data
-                                pipelines for top real estate clients like <strong>Godrej, Adani, Birla, SPRE, BPTP,
-                                    DLF thus helping them drive better marketing decisions and user experince</strong>.
-                            </li>
-                            <li>Provided real-time analytics through KPIs and campaign engagement, leading to a
-                                <strong>10% increase in lead conversion</strong> through cohort and behavioral analysis.
-                            </li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Power BI</span>
-                            <span>Microsoft Fabric</span>
-                            <span>DAX</span>
-                            <span>SQL</span>
-                            <span>Python</span>
+        <section class="hero reveal">
+            <div class="hero-grid parallax-content" data-speed="0.8">
+                <div class="hero-text">
+                    <div class="hero-subtitle">Data Analyst & BI Developer</div>
+                    <h1>Sakshem<br>Gotekar.</h1>
+                    <p class="hero-intro">I turn complex data into measurable business outcomes. Power BI, SQL, and Python are the engines that power insight and drive impact.</p>
+                    
+                    <div class="glass-panel" style="margin-top: 2rem; padding: 2rem;">
+                        <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1rem;">Core Stack & Skills</div>
+                        <div class="tech-grid">
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">DAX</span>
+                            <span class="tech-tag">Microsoft Fabric</span>
+                            <span class="tech-tag">Data Warehousing</span>
+                            <span class="tech-tag">DBT</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag" style="border-color: var(--accent); color: var(--accent);">AI & Agentic Tools</span>
+                            <span class="tech-tag">Product Analytics</span>
                         </div>
                     </div>
                 </div>
+                <div class="hero-image-wrapper">
+                    <img src="Hero1.png" alt="Sakshem Gotekar" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
 
-                <!-- Role 2 -->
-                <div class="exp-card">
-                    <div class="exp-year">2022</div>
-                    <div class="exp-main">
-                        <div class="exp-header">
-                            <h3>Data Science Intern</h3>
-                            <span class="company">@ Intellipaat</span>
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding">
+            <h2 class="reveal">Experience</h2>
+
+            <div class="glass-panel reveal parallax-content" data-speed="0.95">
+                <div class="exp-header-group">
+                    <div>
+                        <div class="exp-role">Data Analyst / BI Developer</div>
+                        <div class="exp-company">Reloy — Loyalie IT Solutions Ltd</div>
+                    </div>
+                    <div class="exp-date">Apr 2024 — Present</div>
+                </div>
+                
+                <div class="exp-results">
+                    <p>Designed and delivered end-to-end analytics solutions for 10+ enterprise real estate clients using <strong>SQL, Python, Power BI, and Microsoft Fabric</strong>, resulting in a <strong>30% increase in campaign engagement</strong> and 15% improvement in referral conversions.</p>
+                    <p>Built and maintained <strong>4+ interactive dashboards</strong> and semantic models featuring real-time KPIs and cohort analysis, improving lead conversion by 10%.</p>
+                    <p>Architected and optimised ETL pipelines integrating 5+ disparate data sources, <strong>reducing manual reporting time by 60%</strong> and enabling self-serve analytics.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel reveal parallax-content" data-speed="0.95">
+                <div class="exp-header-group">
+                    <div>
+                        <div class="exp-role">Data Science Intern</div>
+                        <div class="exp-company">Intellipaat Software Solutions Pvt. Ltd</div>
+                    </div>
+                    <div class="exp-date">Mar 2022 — Sep 2022</div>
+                </div>
+                
+                <div class="exp-results">
+                    <p>Cleaned and transformed datasets of <strong>10M+ records</strong> using Pandas, NumPy, and Seaborn, reducing data inconsistencies by 30% and improving downstream model accuracy.</p>
+                    <p>Built supervised ML classification models achieving <strong>85% accuracy</strong>, improving forecasting precision by 20% and informing feature prioritisation decisions.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel reveal parallax-content" data-speed="0.95">
+                <div class="exp-header-group">
+                    <div>
+                        <div class="exp-role">Operations Analyst</div>
+                        <div class="exp-company">CAG Pvt. Ltd</div>
+                    </div>
+                    <div class="exp-date">Sep 2017 — Mar 2019</div>
+                </div>
+                
+                <div class="exp-results">
+                    <p>Increased annual profitability by <strong>₹15 Lakhs (0.5%)</strong> through data-backed operational controls and systematic rejection of non-compliant shipments.</p>
+                    <p>Reduced documentation error rate by <strong>25%</strong>, preventing compliance penalties and saving approximately ₹5 Lakhs annually through process standardisation and anomaly detection.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="reveal">Selected Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="glass-panel reveal parallax-content project-card project-card-one" data-speed="0.95" style="padding: 2rem;">
+                <div class="project-image-wrapper project-preview project-preview-one">
+                    <img src="Proj1.png" alt="Project 1 work sample" onerror="this.style.display='none'">
+                </div>
+                <div class="project-info">
+                    <div class="project-heading">
+                        <span class="project-number">01</span>
+                        <div>
+                            <p class="project-kicker">Campaigns · Referrals · Engagement</p>
+                            <h3 class="project-title">Project 1</h3>
                         </div>
-                        <ul class="exp-bullets">
-                            <li>• Cleaned and transformed datasets of <strong>10M+ records</strong>, improving data
-                                quality and <strong>reducing inconsistencies by 30% </strong> using Pandas, Numpy,
-                                Matplotlib and Seaborn
-                                for Visualizations and sharing insights with stakeholders.</li>
-                            <li>•Built predictive models with <strong>85% accuracy</strong>, enhancing forecasting
-                                precision by 20% and supporting data-driven decision-making.
-                            </li>
+                    </div>
+                    <div class="project-desc">
+                        <p>WebEngage and other sources send real-time data through webhooks into MySQL (OLTP). Python scripts containing SQL queries, connection strings, and transfer logic move the data into MonetDB (OLAP); a cron job on a virtual server schedules each transfer.</p>
+                        <p>From a separate VM, ODBC loads MonetDB data into Dataflows Gen2, the foundation for Power BI reporting.</p>
+                        <div class="project-flow" aria-label="Data flow: webhooks to MySQL to Python to MonetDB to Dataflows Gen2 to Power BI">
+                            <span>Webhooks</span><span>MySQL</span><span>Python ETL</span><span>MonetDB</span><span>Dataflows Gen2</span><span>Power BI</span>
+                        </div>
+                        <p class="reports-label">Reports include:</p>
+                        <ul class="project-reports">
+                            <li>Campaigns</li>
+                            <li>Referrals</li>
+                            <li>Deals Redemptions</li>
+                            <li>Engagements</li>
+                            <li>Integrations</li>
                         </ul>
-                        <div class="tech-tags">
-                            <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Pandas</span>
-                            <span>Scikit-learn</span>
+                        <p>These reports give executives timely visibility to support decisions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-panel reveal parallax-content project-card project-card-two" data-speed="0.95" style="padding: 2rem;">
+                <div class="project-info">
+                    <div class="project-heading">
+                        <span class="project-number">02</span>
+                        <div>
+                            <p class="project-kicker">Partners · Bookings · Demand</p>
+                            <h3 class="project-title">Project 2</h3>
                         </div>
+                    </div>
+                    <div class="project-desc">
+                        <p>WebEngage and other sources send real-time data through webhooks into MySQL (OLTP). Python scripts containing SQL queries, connection strings, and transfer logic move the data into MonetDB (OLAP); a cron job on a virtual server schedules each transfer.</p>
+                        <p>From a separate VM, ODBC loads MonetDB data into Dataflows Gen2, the foundation for Power BI reporting.</p>
+                        <div class="project-flow" aria-label="Data flow: webhooks to MySQL to Python to MonetDB to Dataflows Gen2 to Power BI">
+                            <span>Webhooks</span><span>MySQL</span><span>Python ETL</span><span>MonetDB</span><span>Dataflows Gen2</span><span>Power BI</span>
+                        </div>
+                        <p class="reports-label">Reports include:</p>
+                        <ul class="project-reports">
+                            <li>Channel Partner Engagements</li>
+                            <li>Bookings</li>
+                            <li>Leads and Enquiries</li>
+                            <li>Integrations</li>
+                            <li>Demands and Receipts</li>
+                        </ul>
+                        <p>These reports give executives timely visibility to support decisions.</p>
+                    </div>
+                </div>
+                <div class="project-image-wrapper project-preview project-preview-two">
+                    <img src="Proj2.png" alt="Project 2 work sample" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="section-padding personal-section">
+            <h2 class="reveal">Travel & Hobbies</h2>
+            <div class="personal-grid reveal">
+                <div class="travel-gallery" aria-label="Travel photos">
+                    <figure class="travel-image-wrapper travel-image-feature">
+                        <img src="Travel1.jpg" alt="Sakshem in the mountains" onerror="this.style.display='none'">
+                    </figure>
+                    <figure class="travel-image-wrapper">
+                        <img src="Travel2.jpg" alt="Sakshem travelling in the mountains" onerror="this.style.display='none'">
+                    </figure>
+                    <figure class="travel-image-wrapper">
+                        <img src="Travel3.jpg" alt="Sakshem visiting a mountain landmark" onerror="this.style.display='none'">
+                    </figure>
+                    <span class="travel-rocket travel-rocket-one" aria-hidden="true">🚀</span>
+                    <span class="travel-rocket travel-rocket-two" aria-hidden="true">🚀</span>
+                    <span class="travel-rocket travel-rocket-three" aria-hidden="true">🚀</span>
+                </div>
+                <div class="hobbies-content">
+                    <p class="travel-kicker">OFF THE CLOCK</p>
+                    <h3>Curious by nature.</h3>
+                    <p class="travel-description">I love exploring places like Spiti, Manali, Shimla, Jaipur, and Agra. Weekends are for studying and upskilling in new technologies, too.</p>
+                    <div class="hobby-list">
+                        <span class="tech-tag">Travelling</span>
+                        <span class="tech-tag">Script Writing</span>
+                        <span class="tech-tag">Workout</span>
+                        <span class="tech-tag">Solo Travelling</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Title -->
-        <div class="section-header" style="margin-top: 4rem;">
-            <h2>Contact</h2>
-            <span class="line"></span>
+        <!-- Education & Certifications Section -->
+        <section id="education" class="section-padding" style="padding-top: 0;">
+            <h2 class="reveal">Education & Certifications</h2>
+            
+            <div class="edu-grid">
+                <div class="glass-panel reveal parallax-content" data-speed="1.0">
+                    <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;">Degree</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">B.Sc. Information Technology</h3>
+                    <p style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">St. Xavier's College (Autonomous), Mumbai</p>
+                    <p style="font-size: 0.9rem;">2013 — 2016</p>
+                </div>
+                
+                <div class="glass-panel reveal parallax-content" data-speed="1.0">
+                    <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;">Certifications</div>
+                    <ul class="cert-list">
+                        <li><strong>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</strong> — <a href="https://learn.microsoft.com/api/credentials/share/en-us/sakshemgotekar-4305/8FEBAE47C85A5383?sharingId=C17C32BA02531DEB" target="_blank" rel="noopener">View credential</a></li>
+                        <li><strong>Data Science & AI</strong> — IIT Madras (Online) & Intellipaat</li>
+                        <li><strong>Advanced Product Management</strong> — Air Tribe</li>
+                        <li><strong>Product Analytics</strong> — Pendo x Mind the Product</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding reveal">
+            <div class="glass-panel parallax-content" data-speed="1.1">
+                <div class="contact-grid">
+                    <div>
+                        <h2 style="margin-top:0; margin-bottom: 1.5rem;">Let's create something<br>meaningful together.</h2>
+                        <p style="margin-bottom: 2rem;">I'm always open to discussing new data-driven opportunities, complex analytics challenges, or agentic AI integrations.</p>
+                        <div class="contact-links" style="margin-top:0;">
+                            <a href="mailto:sakshemgotekar@gmail.com" class="contact-btn">Email Me</a>
+                            <a href="https://linkedin.com/in/sakshemgotekar" target="_blank" rel="noopener" class="contact-btn outline">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div class="contact-image-wrapper">
+                        <img src="Hero2.png" alt="Sakshem Gotekar Portrait" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Sakshem Gotekar</h3>
+                <p>Translating complex datasets into measurable business outcomes through modern data engineering and analytics.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:sakshemgotekar@gmail.com">sakshemgotekar@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/sakshemgotekar" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="tel:+919769093252">+91 97690 93252</a></li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Contact (Immersive / Split) -->
-        <section id="contact" class="contact-minimal">
-            <div class="contact-bg-minimal">
-                <img src="Hero2.png" alt="Abstract Background">
-            </div>
-            <div class="contact-content-minimal">
-                <h2>Let's create something<br>meaningful together.</h2>
-                <div class="contact-links">
-                    <a href="mailto:sakshemgotekar@gmail.com">sakshemgotekar@gmail.com</a>
-                    <a href="https://linkedin.com/in/sakshemgotekar">LinkedIn Profile</a>
-                    <a href="tel:+919769093252">+91 97690 93252</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Sakshem Gotekar. All rights reserved.</p>
+        <div class="footer-bottom">
+            <div>&copy; 2026 Sakshem Gotekar. All rights reserved.</div>
+            <div>Mumbai, India</div>
+        </div>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
-
 </html>
